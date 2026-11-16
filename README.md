@@ -1,17 +1,7 @@
-# CCC Digital Mystery School — Version 1.2
+CCC Digital Mystery School v1.3 — Visual Sacred Library
 
-This release integrates all 13 provided Google Drive publication links into the Sacred Library and removes the Cosmic Decoder. Titles are assigned according to the agreed collection order; PDF content and public accessibility have not been independently verified.
+All 13 user-supplied official covers are locally packaged as optimized WebP images in covers/. Descriptions are editorial summaries, not quotations from the full PDFs. All 13 original Google Drive links retained. Existing journal/progress storage keys unchanged.
 
-## Update your GitHub Pages site
+To deploy: upload ALL contents of this ZIP (not the containing folder) to the root of your existing GitHub Pages repository, including the covers/ folder. Refresh the installed PWA after GitHub Pages deploys. Google Drive PDFs require public sharing and internet access.
 
-Upload the contents of this ZIP to the **root** of your existing repository, replacing the existing files (not the ZIP itself). Do not delete the repository or change Pages settings. If the web uploader does not allow overwriting, edit/replace the corresponding files in GitHub. Wait for the Pages deployment to finish, then reopen the installed PWA while online. The service-worker cache name was updated to refresh the app.
-
-## Before sharing publicly
-
-Open every Read PDF link in a private/incognito browser window to ensure the Google Drive sharing permissions are set to **Anyone with the link — Viewer**. Files remain hosted on Google Drive, so reading them requires internet access unless the user downloads a PDF.
-
-No personal notes or progress data are intentionally cleared by this update. Still, export journal notes before making changes whenever possible.
-
-
-## Version 1.2.1 layout fix
-Book titles, subtitles, and reading links now appear on separate lines. Replace all app files in your GitHub Pages repository, including styles.css and sw.js, then wait for deployment and reopen the app. Existing local journal and progress data are not intentionally changed.
+Version 1.3.1: white PDF-page margins cropped from book cover thumbnails.
