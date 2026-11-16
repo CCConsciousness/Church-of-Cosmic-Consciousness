@@ -1,0 +1,27 @@
+(()=>{'use strict';
+const $=id=>document.getElementById(id), duration=$('chamberDuration'),practice=$('chamberPractice'),clock=$('chamberClock'),state=$('chamberState'),start=$('chamberStart'),reset=$('chamberReset'),progress=$('chamberProgress');
+if(!duration)return;
+const modes={
+presence:{title:'Open Presence',intro:'Notice sounds, sensations, and thoughts as they arise. There is no need to push anything away.',prompt:'What did I notice when I allowed experience to be as it was?',steps:['Sit comfortably and feel the support beneath you.','Notice the movement of attention without judging it.','When distracted, simply recognize that noticing is already present.','End by taking in the room around you.']},
+breath:{title:'Gentle Breath Awareness',intro:'Follow your natural breathing without changing its rhythm. If breath focus feels uncomfortable, attend to sounds or contact with the chair instead.',prompt:'How did attention shift when I followed an ordinary breath?',steps:['Let the breath move at its own pace.','Feel a gentle inhale and exhale.','When attention wanders, return without criticism.','Keep breathing naturally; no counting or holding is necessary.']},
+inquiry:{title:'Nondual Inquiry',intro:'Explore how distinctions arise in experience without requiring a particular metaphysical conclusion.',prompt:'What happened when I investigated the boundary between observer and observed?',steps:['Notice a sensation or sound.','Ask quietly: where is the boundary between knowing and what is known?','Allow uncertainty rather than forcing an answer.','Return to ordinary awareness of your surroundings.']},
+kindness:{title:'Compassion & Connection',intro:'Practice care for yourself and others without denying real differences or difficulties.',prompt:'What did compassion feel like in ordinary experience?',steps:['Bring to mind a moment of ordinary care.','Wish yourself safety and ease.','Extend the same wish to someone else, without obligation.','Notice how care can coexist with boundaries.']}
+};
+let remaining=Number(duration.value),total=remaining,ends=0,tick=null,ctx=null;
+const storage='ccc_meditation_sessions_v1';
+function history(){try{const a=JSON.parse(localStorage.getItem(storage)||'[]');return Array.isArray(a)?a:[]}catch{return []}}
+function renderStats(){const a=history();const mins=Math.round(a.reduce((s,x)=>s+(Number(x.seconds)||0),0)/60);$('chamberStats').textContent=`${a.length} completed session${a.length===1?'':'s'} · ${mins} total minutes · saved on this device only.`}
+function fmt(n){return `${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`}
+function draw(){clock.textContent=fmt(remaining);progress.style.width=`${Math.max(0,Math.min(100,100*(total-remaining)/total))}%`}
+function sound(){if(!$('chamberBell').checked)return;try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;ctx=ctx||new AC();if(ctx.state==='suspended')ctx.resume();const t=ctx.currentTime;[440,660].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0.0001,t+i*.08);g.gain.exponentialRampToValueAtTime(.035,t+i*.08+.06);g.gain.exponentialRampToValueAtTime(.0001,t+i*.08+.9);o.connect(g).connect(ctx.destination);o.start(t+i*.08);o.stop(t+i*.08+1)})}catch{}}
+function pause(){if(tick)clearInterval(tick);tick=null;start.textContent='Resume session';document.querySelector('.chamber-shell').classList.remove('chamber-running')}
+function finish(){pause();remaining=0;draw();start.textContent='Begin again';state.textContent='Session complete. Return gently to your surroundings.';sound();try{const a=history();a.push({date:new Date().toISOString(),practice:practice.value,seconds:total});localStorage.setItem(storage,JSON.stringify(a.slice(-500)))}catch{}renderStats()}
+function update(){remaining=Math.max(0,Math.ceil((ends-Date.now())/1000));draw();if(!remaining)finish()}
+function restart(){pause();total=Number(duration.value);remaining=total;draw();start.textContent='Begin session';state.textContent='Ready when you are'}
+function guidance(){const m=modes[practice.value];$('chamberIntention').textContent=m.intro;const area=$('chamberGuidance');area.replaceChildren();const p=document.createElement('p');p.textContent=m.intro;area.append(p);const ol=document.createElement('ol');m.steps.forEach(s=>{const li=document.createElement('li');li.textContent=s;ol.append(li)});area.append(ol)}
+start.addEventListener('click',()=>{if(tick){update();if(tick){pause();state.textContent='Paused — resume whenever you wish'}return}if(remaining===0)restart();ends=Date.now()+remaining*1000;start.textContent='Pause session';state.textContent=modes[practice.value].title+' · in progress';document.querySelector('.chamber-shell').classList.add('chamber-running');sound();tick=setInterval(update,250)});
+reset.addEventListener('click',restart);duration.addEventListener('change',restart);practice.addEventListener('change',()=>{restart();guidance()});
+$('chamberJournal').addEventListener('click',()=>{const m=modes[practice.value];document.querySelector('[data-go="journal"]').click();const note=$('note');note.value=`[Meditation Chamber · ${m.title}]\n${m.prompt}\n\n`;note.focus()});
+$('chamberClear').addEventListener('click',()=>{if(confirm('Delete meditation session history on this device? This will not affect your journal or study progress.')){localStorage.removeItem(storage);renderStats()}});
+guidance();restart();renderStats();
+})();

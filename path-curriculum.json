@@ -1,0 +1,400 @@
+{
+  "seeker": [
+    [
+      "Week 1 — The Invitation to Seek",
+      "Chapters 1–3",
+      "Guided Lessons 001–002",
+      "What originally motivated your interest in spiritual or philosophical inquiry?"
+    ],
+    [
+      "Week 2 — The Absolute and the Perennial Philosophy",
+      "Chapters 4–5",
+      "Guided Lessons 003–004",
+      "How does the idea of the Absolute challenge my habitual categories?"
+    ],
+    [
+      "Week 3 — Humanity, Nature, and the Four Canonical Books",
+      "Chapters 6–7",
+      "Guided Lessons 005–006",
+      "How do my assumptions about nature and society shape my choices?"
+    ],
+    [
+      "Week 4 — The Human Being, Consciousness, and Ethics",
+      "Chapter 8; revisit Chapter 6",
+      "Guided Lessons 007–009",
+      "How can inquiry shape the way I treat other people?"
+    ],
+    [
+      "Week 5 — Contemplation and Integration",
+      "Chapters 9–10",
+      "Guided Lessons 010–011",
+      "What has changed in my approach to inquiry over these five weeks?"
+    ]
+  ],
+  "initiate": [
+    {
+      "id": "INI-001",
+      "title": "The Threshold of Initiation: From Seeking to Disciplined Inquiry",
+      "question": "What does it mean to transform the search for truth into a disciplined way of life?"
+    },
+    {
+      "id": "INI-002",
+      "title": "The Covenant of Disciplined Inquiry: Responsibility, Freedom, and the Life of Study",
+      "question": "How can an Initiate establish a disciplined commitment to inquiry without surrendering intellectual freedom or personal autonomy?"
+    },
+    {
+      "id": "INI-003",
+      "title": "The Constructed Self: Identity, Memory, and the Architecture of Personal Experience",
+      "question": "What is the relationship between the person we experience ourselves to be and the processes through which that identity develops?"
+    },
+    {
+      "id": "INI-004",
+      "title": "The Mechanisms of Conditioning: Habit, Perception, and the Recovery of Discernment",
+      "question": "How do inherited assumptions and habitual reactions influence human experience, and how can disciplined investigation create greater freedom of response?"
+    },
+    {
+      "id": "INI-005",
+      "title": "The Cultivation of Attention: Stability, Observation, and the Discipline of Presence",
+      "question": "How can attention be cultivated as a reliable instrument of philosophical and contemplative investigation?"
+    },
+    {
+      "id": "INI-006",
+      "title": "The Discipline of Self-Inquiry: Investigating the Observer and the Limits of Identification",
+      "question": "What becomes possible when the individual investigates not only the contents of experience, but also the assumptions underlying the experience of being an observer?"
+    },
+    {
+      "id": "INI-007",
+      "title": "The Architecture of Duality: Subject, Object, and the Limits of Conceptual Division",
+      "question": "Do the distinctions through which human beings understand reality necessarily establish that reality is fundamentally divided?"
+    },
+    {
+      "id": "INI-008",
+      "title": "The Absolute Beyond Oppositions: Consciousness, Matter, Being, and Nonbeing",
+      "question": "What are the limitations of attempting to describe ultimate reality through the conceptual categories of human thought?"
+    },
+    {
+      "id": "INI-009",
+      "title": "The Four Domains of Inquiry: Learning to Compare Without Conflating",
+      "question": "What does this lesson ask me to examine, and why?"
+    },
+    {
+      "id": "INI-010",
+      "title": "Three Interpretive Lenses: Exoteric, Mesoteric, and Esoteric Inquiry",
+      "question": "What does this lesson ask me to examine, and why?"
+    },
+    {
+      "id": "INI-011",
+      "title": "The Discipline of Dialectic: Understanding Conflict Before Attempting Resolution",
+      "question": "What must be understood about a disagreement before an intellectually responsible resolution can be proposed?"
+    },
+    {
+      "id": "INI-012",
+      "title": "Paradox, False Opposition, and the Limits of Intellectual Synthesis",
+      "question": "How can the Initiate distinguish a productive paradox from a contradiction that remains genuinely unresolved?"
+    },
+    {
+      "id": "INI-013",
+      "title": "Embodied Awareness: Nature, Interdependence, and the Conditions of Human Life",
+      "question": "How can an Initiate investigate human dependence on the living world without confusing ecological fact, personal experience, and metaphysical interpretation?"
+    },
+    {
+      "id": "INI-014",
+      "title": "Living Deliberately: Conditioning, Technology, Consumption, and Ethical Responsibility",
+      "question": "How can the Initiate recognize cultural and technological conditioning while making informed, autonomous, and sustainable choices?"
+    },
+    {
+      "id": "INI-015",
+      "title": "The Discipline of Integration: Bringing Knowledge, Experience, and Conduct into Relation",
+      "question": "What would count as genuine educational integration when intellectual understanding, contemplative observation, and ethical responsibility are distinct but mutually relevant?"
+    },
+    {
+      "id": "INI-016",
+      "title": "The Threshold of Adeptship: Assessment, Continuity, and Responsible Advancement",
+      "question": "How can the completion of Initiation be assessed fairly, and what kind of preparation justifies proceeding to the next educational stage?"
+    }
+  ],
+  "adept": [
+    {
+      "id": "A001",
+      "title": "Knowledge, Belief, and Justification",
+      "question": "Distinguish a claim you believe from one you can presently justify. What evidence would change your confidence?"
+    },
+    {
+      "id": "A002",
+      "title": "The Observer, Interpretation, and Cognitive Limits",
+      "question": "Describe one observation before naming or explaining it. Where did expectation influence what you noticed?"
+    },
+    {
+      "id": "A003",
+      "title": "Uncertainty, Skepticism, and Discernment",
+      "question": "When does skepticism improve inquiry, and when does it become an excuse to avoid judgment?"
+    },
+    {
+      "id": "A004",
+      "title": "The Structure of Lived Experience",
+      "question": "Distinguish sensory qualities, bodily feelings, thought, memory, and evaluation in one ordinary episode."
+    },
+    {
+      "id": "A005",
+      "title": "Self-Inquiry and the Construction of Identity",
+      "question": "Which identity descriptions are roles, habits, narratives, or immediate observations?"
+    },
+    {
+      "id": "A006",
+      "title": "Experience, Interpretation, and the Limits of Introspection",
+      "question": "What can introspection reveal, and what can it not independently establish about the world?"
+    },
+    {
+      "id": "A007",
+      "title": "The Absolute Beyond Conceptual Opposition",
+      "question": "How does CCC’s Absolute differ from claims that matter or consciousness is ultimate?"
+    },
+    {
+      "id": "A008",
+      "title": "Unity, Multiplicity, and Apparent Paradox",
+      "question": "When does a perceived opposition reflect different descriptive levels rather than a contradiction?"
+    },
+    {
+      "id": "A009",
+      "title": "Language, Negation, and the Limits of Metaphysics",
+      "question": "How can negation clarify a doctrine without pretending to define what lies beyond concepts?"
+    },
+    {
+      "id": "A010",
+      "title": "Comparative Method and Contextual Fidelity",
+      "question": "What is lost when a tradition is compared without its historical or practical context?"
+    },
+    {
+      "id": "A011",
+      "title": "Exoteric, Mesoteric, and Esoteric Interpretation",
+      "question": "What can exoteric, mesoteric, and esoteric lenses illuminate—and what might each obscure?"
+    },
+    {
+      "id": "A012",
+      "title": "Synthesis, Incommensurability, and False Equivalence",
+      "question": "Where is a proposed synthesis illuminating, and where does it collapse real differences?"
+    },
+    {
+      "id": "A013",
+      "title": "Contradiction, Opposition, and Category Errors",
+      "question": "Is the apparent contradiction logical, empirical, terminological, or ethical?"
+    },
+    {
+      "id": "A014",
+      "title": "Dialectical Reasoning and Competing Truth Claims",
+      "question": "Can you state opposing positions in forms their defenders would recognize?"
+    },
+    {
+      "id": "A015",
+      "title": "Resolution, Productive Disagreement, and Unresolved Questions",
+      "question": "What would count as progress if neither side reaches agreement?"
+    },
+    {
+      "id": "A016",
+      "title": "Conditioning, Identity, and Social Systems",
+      "question": "Which parts of a personal conviction reflect family, institutions, media, or incentives?"
+    },
+    {
+      "id": "A017",
+      "title": "Emergence, Interdependence, and Ecological Relationships",
+      "question": "How do feedback, interdependence, and scale change a simple cause-and-effect story?"
+    },
+    {
+      "id": "A018",
+      "title": "Agency, Freedom, and Responsible Participation",
+      "question": "How can conditioning be acknowledged without erasing meaningful agency?"
+    },
+    {
+      "id": "A019",
+      "title": "The Ethics of Nondual Understanding",
+      "question": "Why does recognizing interdependence not automatically tell us what is morally right?"
+    },
+    {
+      "id": "A020",
+      "title": "Compassion, Power, and the Responsibilities of Influence",
+      "question": "How can spiritual authority be exercised without coercion or claims of exclusive access to truth?"
+    },
+    {
+      "id": "A021",
+      "title": "Service, Conflict, and Ethical Decision-Making",
+      "question": "What does service require when intentions and outcomes conflict?"
+    },
+    {
+      "id": "A022",
+      "title": "Constructing an Integrated Philosophical Framework",
+      "question": "Which concepts form your framework, and where are its boundaries or unresolved tensions?"
+    },
+    {
+      "id": "A023",
+      "title": "The Adept’s Integrative Inquiry Project",
+      "question": "What makes a project genuinely integrative rather than merely broad?"
+    },
+    {
+      "id": "A024",
+      "title": "The Threshold of Mastery: Humility, Responsibility, and Continuing Inquiry",
+      "question": "What would readiness for Master-stage study mean without a claim of final enlightenment?"
+    }
+  ],
+  "master": [
+    {
+      "id": "M001",
+      "title": "Mastery Beyond Status and Spiritual Superiority",
+      "question": "Describe three situations in which being perceived as an expert might make you less willing to admit uncertainty. For each, write what an accountable response would sound like."
+    },
+    {
+      "id": "M002",
+      "title": "The Responsibility of Advanced Understanding",
+      "question": "Identify a claim you understand well and a related question you cannot answer. Explain why both belong in responsible teaching."
+    },
+    {
+      "id": "M003",
+      "title": "Epistemic Humility at the Highest Stage",
+      "question": "Choose a belief you hold strongly. Separate the evidence, interpretive assumptions, emotional investments, and unresolved questions supporting it."
+    },
+    {
+      "id": "M004",
+      "title": "The Lifelong Discipline of Unfinished Inquiry",
+      "question": "Describe an occasion when an unfinished question led to better inquiry than a premature conclusion. Identify the habits that sustained the investigation."
+    },
+    {
+      "id": "M005",
+      "title": "Integrating Scientific, Philosophical, and Contemplative Inquiry",
+      "question": "Choose a contested claim about consciousness. Write one sentence each stating what an experiment could test, what philosophy could clarify, what first-person practice could report, and what remains unknown."
+    },
+    {
+      "id": "M006",
+      "title": "The Limits of Comprehensive Worldviews",
+      "question": "Describe a framework you value. Name three questions it answers well and three it cannot settle; explain why the limits matter."
+    },
+    {
+      "id": "M007",
+      "title": "Advanced Comparative Synthesis and Contextual Fidelity",
+      "question": "Identify a pair of superficially similar concepts from two traditions. What evidence would be needed before calling them equivalent?"
+    },
+    {
+      "id": "M008",
+      "title": "Constructing and Revising an Integrated Framework",
+      "question": "What is the difference between a useful integrative map and a claim to total explanation? Identify a place where your own synthesis risks overreach."
+    },
+    {
+      "id": "M009",
+      "title": "Communication Beyond Dogmatism",
+      "question": "Recall a moment when certainty made dialogue harder. Rewrite your claim to distinguish conviction, evidence, and interpretation."
+    },
+    {
+      "id": "M010",
+      "title": "Teaching Through Questions and Guided Discovery",
+      "question": "What makes a question genuinely open? Write three questions that invite discovery and three that covertly demand agreement."
+    },
+    {
+      "id": "M011",
+      "title": "Translating Complex Ideas Without Distortion",
+      "question": "Select a complex CCC idea and identify two ways a metaphor could mislead a novice."
+    },
+    {
+      "id": "M012",
+      "title": "Dialogue Across Intellectual and Cultural Boundaries",
+      "question": "Describe a belief you disagree with and restate its strongest defensible form without caricature."
+    },
+    {
+      "id": "M013",
+      "title": "The Ethics of Spiritual and Philosophical Authority",
+      "question": "Where might students confuse confidence with competence? Identify two ways you could unintentionally benefit from that confusion."
+    },
+    {
+      "id": "M014",
+      "title": "Consent, Boundaries, and the Prevention of Dependency",
+      "question": "Describe the difference between voluntary guidance and subtle pressure; identify two warning signs of dependency."
+    },
+    {
+      "id": "M015",
+      "title": "Power, Accountability, and Institutional Responsibility",
+      "question": "Name one harm that can occur even when a leader has good intentions. What independent process would detect it?"
+    },
+    {
+      "id": "M016",
+      "title": "Mentorship Without Coercion or Exclusive Truth Claims",
+      "question": "What would respectful mentorship look like when a student rejects your interpretation? Draft a response."
+    },
+    {
+      "id": "M017",
+      "title": "The Architecture of Deep Philosophical Disagreement",
+      "question": "Choose a dispute about mind and matter. Write each side’s strongest claim, the evidence it accepts, and a question it cannot yet answer."
+    },
+    {
+      "id": "M018",
+      "title": "Conflict, Identity, and Competing Interpretive Frameworks",
+      "question": "Describe a conflict in which two groups use the same word differently. Distinguish the semantic dispute from a factual or ethical dispute."
+    },
+    {
+      "id": "M019",
+      "title": "Resolution, Reconciliation, and Legitimate Disagreement",
+      "question": "Identify a historical or contemporary controversy where consensus would be misleading. Explain what a defensible partial outcome might be."
+    },
+    {
+      "id": "M020",
+      "title": "Facilitating Difficult Conversations Responsibly",
+      "question": "Recall a discussion that deteriorated. Identify the first observable point at which listening or safety failed."
+    },
+    {
+      "id": "M021",
+      "title": "Nonduality and the Responsibilities of Social Participation",
+      "question": "Examine a social issue. Separate empirical conditions, ethical priorities, and metaphysical interpretations."
+    },
+    {
+      "id": "M022",
+      "title": "Systems, Ecology, and Collective Well-Being",
+      "question": "Choose an environmental or community problem. Identify who benefits, who bears costs, and what evidence is missing."
+    },
+    {
+      "id": "M023",
+      "title": "Compassionate Action Under Conditions of Uncertainty",
+      "question": "Write about a time good intentions were insufficient. Distinguish intent, foreseeable consequences, and responsibility for correction."
+    },
+    {
+      "id": "M024",
+      "title": "Designing Ethical and Sustainable Service Initiatives",
+      "question": "Identify a community need without presuming that you know what affected people want. Write five listening questions."
+    },
+    {
+      "id": "M025",
+      "title": "Identifying a Significant Question Worth Investigating",
+      "question": "List three questions arising from your study. For each, identify what is already known and what would count as progress."
+    },
+    {
+      "id": "M026",
+      "title": "Research Methodology, Evidence, and Source Integrity",
+      "question": "Compare a philosophical argument, a historical claim, and an empirical claim. Explain how verification differs for each."
+    },
+    {
+      "id": "M027",
+      "title": "Developing an Original Philosophical Contribution",
+      "question": "State your proposed contribution in one sentence, then write the strongest existing alternative."
+    },
+    {
+      "id": "M028",
+      "title": "Peer Criticism, Revision, and Intellectual Accountability",
+      "question": "Describe a belief you have changed and identify what evidence or argument made revision possible."
+    },
+    {
+      "id": "M029",
+      "title": "Designing an Ethical Teaching or Mentorship Framework",
+      "question": "Identify the differences between explanation, mentorship, counseling, and spiritual authority. State boundaries for each."
+    },
+    {
+      "id": "M030",
+      "title": "Master Integrative Thesis or Capstone Project",
+      "question": "State the question your capstone addresses, why it matters, and what it does not attempt to prove."
+    },
+    {
+      "id": "M031",
+      "title": "Public Defense, Dialogue, and Demonstrated Competence",
+      "question": "Identify your three most vulnerable claims and write the questions a fair examiner should ask."
+    },
+    {
+      "id": "M032",
+      "title": "The Continuing Responsibility of the Master",
+      "question": "Describe three responsibilities that continue after a certificate or title is awarded."
+    }
+  ]
+}

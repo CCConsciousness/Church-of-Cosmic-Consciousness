@@ -40,3 +40,62 @@
 
 /* v1.10 in-context student definitions */
 .term-inline{display:inline;padding:0 2px;margin:0;background:rgba(196,165,95,.14);border:0;border-bottom:1px dotted #d8c08d;color:#f0d9a1;font:inherit;line-height:inherit;cursor:pointer;border-radius:2px;white-space:normal}.term-inline:focus-visible,.term-related-button:focus-visible{outline:2px solid #f1ca75;outline-offset:2px}.term-dialog{width:min(94vw,530px);max-height:80vh;overflow:auto;border:1px solid #bba46f;border-radius:16px;background:#102334;color:#f3f2e9;padding:22px;box-shadow:0 16px 70px #000b}.term-dialog::backdrop{background:#020b13cc}.term-dialog-head{display:flex;justify-content:space-between;align-items:start;gap:12px}.term-dialog-head h2{margin:0;font-size:1.35rem}.term-dialog-head button{flex-shrink:0}.term-related{margin-top:12px;border-top:1px solid #ffffff22;padding-top:9px;font-size:.8rem;line-height:1.8}.term-related-button{border:0;background:none;color:#bfe7d8;text-decoration:underline;cursor:pointer;font:inherit;padding:0 2px}.term-dialog p{line-height:1.6}
+
+/* Version 1.12: compact alphabetical navigation */
+.encyclopedia-letters{display:grid;grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:7px;margin:10px 0 18px}
+.letter-chip{min-width:0;min-height:42px;padding:8px 4px;border:1px solid rgba(185,170,128,.38);border-radius:9px;background:rgba(20,42,56,.8);color:#f4f0e5;font-size:.9rem;font-weight:700;cursor:pointer}
+.letter-chip.active{background:#b9a77d;color:#101e2a;border-color:#e8d4a4}
+.letter-chip:disabled{opacity:.32;cursor:not-allowed}
+.letter-chip:focus-visible{outline:3px solid #d8c99b;outline-offset:2px}
+.encyclopedia-pagination{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:16px;padding:18px 0 28px}
+.encyclopedia-pagination button{min-width:110px}
+@media(max-width:420px){.encyclopedia-letters{grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.letter-chip{min-height:40px}}
+
+/* Meditation Chamber */
+.chamber-shell{position:relative;overflow:hidden;text-align:center;border:1px solid rgba(176,207,222,.26);border-radius:24px;padding:24px 16px 26px;background:radial-gradient(ellipse at 50% 27%,#263c59 0%,#111f35 48%,#0b1526 100%);color:#f4f4f8;margin:16px 0}
+.chamber-sky{height:190px;display:flex;align-items:center;justify-content:center;position:relative}
+.chamber-halo{position:absolute;width:148px;height:148px;border-radius:50%;background:radial-gradient(circle,#d1c6f9 0%,#8c9be1 19%,#5b79b0 34%,rgba(94,128,179,.16) 66%,transparent 72%);filter:blur(1px);box-shadow:0 0 65px rgba(154,169,229,.25)}
+.chamber-core{position:relative;font-size:58px;color:#f5edff;text-shadow:0 0 25px #e2d7ff}
+.chamber-running .chamber-halo{animation:chamberBreathe 7s ease-in-out infinite}
+@keyframes chamberBreathe{0%,100%{transform:scale(.85);opacity:.75}50%{transform:scale(1.14);opacity:1}}
+@media(prefers-reduced-motion:reduce){.chamber-running .chamber-halo{animation:none}}
+.chamber-intention{font-size:1rem;max-width:420px;margin:0 auto 14px;line-height:1.55;color:#e3e7f1}
+.chamber-clock{font-variant-numeric:tabular-nums;font-size:clamp(2.5rem,10vw,4rem);font-weight:650;letter-spacing:.05em}
+.chamber-progress{height:5px;background:#44546a;border-radius:10px;max-width:300px;margin:10px auto;overflow:hidden}
+.chamber-progress>div{width:0%;height:100%;background:#d9c49d;transition:width .25s linear}
+.chamber-state{color:#e3e7f1;min-height:1.5em}
+.chamber-actions{justify-content:center;flex-wrap:wrap}
+.chamber-check{display:flex;align-items:center;gap:10px;margin-top:16px}
+.chamber-check input{width:auto;flex:none}
+
+/* Expanded About page */
+.about-banner{margin:16px 0 20px;padding:30px 16px;text-align:center;border:1px solid rgba(189,164,116,.38);border-radius:20px;background:radial-gradient(ellipse at 50% 15%,#28465c 0%,#152638 60%,#0b1725 100%);color:#f7f1e6}
+.about-banner .eyebrow{color:#d6c6a1}
+.about-banner h2{font-size:clamp(1.3rem,5vw,2rem);line-height:1.5;color:#fff;margin:10px 0}
+.about-mark{font-size:3.5rem;color:#dfcfae;text-shadow:0 0 30px #a3b8df}
+.about-points{display:grid;gap:12px}
+.about-points>div{padding:12px 14px;border-left:3px solid #bda474;background:rgba(122,151,166,.08);border-radius:5px}
+.about-points p{margin:5px 0 0}
+#about .panel p,#about .panel li{line-height:1.7}
+#about .panel li{margin-bottom:10px}
+.about-footer{text-align:center;margin:20px 0 36px}
+
+/* The Path: sequential curriculum */
+.path-overall progress,.path-bar{width:100%;height:14px;accent-color:#68ad92}
+.path-stage{padding:16px;margin-bottom:16px}
+.path-stage-head{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;background:transparent;color:inherit;border:0;padding:8px 0 12px}
+.path-stage-title{font-weight:750;font-size:1.25rem}
+.path-count{font-size:.84rem;opacity:.8;text-align:right}
+.path-stage-body{padding-top:10px}
+.path-module{margin:22px 0 12px;border-bottom:1px solid rgba(130,150,160,.28);padding-bottom:8px}
+.path-unit{border:1px solid rgba(130,150,160,.24);border-radius:14px;margin:12px 0;padding:14px}
+.path-unit h4{margin:0 0 14px}
+.path-task{padding:12px 10px;border-top:1px solid rgba(130,150,160,.18)}
+.path-task p{margin:8px 0;line-height:1.55}
+.path-check{display:flex;align-items:center;gap:10px;cursor:pointer}
+.path-check input{width:20px;height:20px;flex:none;accent-color:#68ad92}
+.path-task.path-done{opacity:.68}
+.path-task.path-done .path-check strong{text-decoration:line-through}
+.path-question{padding:10px;border-left:3px solid #a9c5b2;background:rgba(130,160,150,.09);font-style:italic}
+.path-task .book-link{display:inline-block;margin:5px 10px 5px 0;font-size:.85rem}
+.path-task button{margin-top:8px}
