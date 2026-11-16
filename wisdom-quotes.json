@@ -1,0 +1,338 @@
+[
+  {
+    "domain": "Religions",
+    "author": "Jesus of Nazareth",
+    "source": "Matthew 7:7 (King James Version)",
+    "text": "Ask, and it shall be given you; seek, and ye shall find.",
+    "tradition": "Christianity"
+  },
+  {
+    "domain": "Religions",
+    "author": "Jesus of Nazareth",
+    "source": "Matthew 5:9 (King James Version)",
+    "text": "Blessed are the peacemakers: for they shall be called the children of God.",
+    "tradition": "Christianity"
+  },
+  {
+    "domain": "Religions",
+    "author": "Jesus of Nazareth",
+    "source": "Matthew 6:21 (King James Version)",
+    "text": "For where your treasure is, there will your heart be also.",
+    "tradition": "Christianity"
+  },
+  {
+    "domain": "Religions",
+    "author": "Paul the Apostle",
+    "source": "1 Corinthians 13:13 (King James Version)",
+    "text": "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+    "tradition": "Christianity"
+  },
+  {
+    "domain": "Religions",
+    "author": "Hebrew Bible",
+    "source": "Ecclesiastes 3:1 (King James Version)",
+    "text": "To every thing there is a season, and a time to every purpose under the heaven.",
+    "tradition": "Judaism / Christianity"
+  },
+  {
+    "domain": "Religions",
+    "author": "Hebrew Bible",
+    "source": "Proverbs 15:1 (King James Version)",
+    "text": "A soft answer turneth away wrath: but grievous words stir up anger.",
+    "tradition": "Judaism / Christianity"
+  },
+  {
+    "domain": "Religions",
+    "author": "Hebrew Bible",
+    "source": "Micah 6:8 (King James Version)",
+    "text": "What doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+    "tradition": "Judaism / Christianity"
+  },
+  {
+    "domain": "Religions",
+    "author": "Qur’an",
+    "source": "Qur’an 2:256 (English rendering; translations vary)",
+    "text": "There is no compulsion in religion.",
+    "tradition": "Islam"
+  },
+  {
+    "domain": "Religions",
+    "author": "Qur’an",
+    "source": "Qur’an 94:5 (English rendering; translations vary)",
+    "text": "With hardship comes ease.",
+    "tradition": "Islam"
+  },
+  {
+    "domain": "Religions",
+    "author": "Qur’an",
+    "source": "Qur’an 49:13 (English rendering; translations vary)",
+    "text": "We made you into nations and tribes so that you may know one another.",
+    "tradition": "Islam"
+  },
+  {
+    "domain": "Religions",
+    "author": "Dhammapada",
+    "source": "Dhammapada 5 (English rendering; translations vary)",
+    "text": "Hatred is never appeased by hatred in this world. By non-hatred alone is hatred appeased.",
+    "tradition": "Buddhism"
+  },
+  {
+    "domain": "Religions",
+    "author": "Dhammapada",
+    "source": "Dhammapada 183 (English rendering; translations vary)",
+    "text": "To avoid all evil, to cultivate good, and to cleanse one’s mind—this is the teaching of the Buddhas.",
+    "tradition": "Buddhism"
+  },
+  {
+    "domain": "Religions",
+    "author": "Laozi",
+    "source": "Tao Te Ching, chapter 1 (English rendering; translations vary)",
+    "text": "The Tao that can be told is not the eternal Tao.",
+    "tradition": "Taoism"
+  },
+  {
+    "domain": "Religions",
+    "author": "Laozi",
+    "source": "Tao Te Ching, chapter 64 (English rendering; translations vary)",
+    "text": "A journey of a thousand miles begins beneath one’s feet.",
+    "tradition": "Taoism"
+  },
+  {
+    "domain": "Religions",
+    "author": "Bhagavad Gita",
+    "source": "Bhagavad Gita 2:47 (English rendering; translations vary)",
+    "text": "You have the right to work, but not to the fruits of work.",
+    "tradition": "Hinduism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Socrates (as portrayed by Plato)",
+    "source": "Apology 38a (English rendering; translations vary)",
+    "text": "The unexamined life is not worth living.",
+    "tradition": "Ancient Greek philosophy"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Aristotle",
+    "source": "Metaphysics, Book I (English rendering; translations vary)",
+    "text": "All men by nature desire to know.",
+    "tradition": "Ancient Greek philosophy"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Epictetus",
+    "source": "Enchiridion 1 (English rendering; translations vary)",
+    "text": "Some things are in our control and others not.",
+    "tradition": "Stoicism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Marcus Aurelius",
+    "source": "Meditations 4.3 (English rendering; translations vary)",
+    "text": "Men seek retreats for themselves, houses in the country, sea-shores, and mountains.",
+    "tradition": "Stoicism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "René Descartes",
+    "source": "Discourse on the Method, Part IV (English translation)",
+    "text": "I think, therefore I am.",
+    "tradition": "Rationalism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Francis Bacon",
+    "source": "Meditationes Sacrae (1597)",
+    "text": "Knowledge is power.",
+    "tradition": "Early modern philosophy"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "John Locke",
+    "source": "An Essay Concerning Human Understanding, Book II, chapter 1",
+    "text": "Let us then suppose the mind to be, as we say, white paper, void of all characters.",
+    "tradition": "Empiricism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "David Hume",
+    "source": "An Enquiry Concerning Human Understanding, Section XII",
+    "text": "A wise man, therefore, proportions his belief to the evidence.",
+    "tradition": "Empiricism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Immanuel Kant",
+    "source": "An Answer to the Question: What Is Enlightenment? (English translation)",
+    "text": "Dare to know!",
+    "tradition": "Enlightenment"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Mary Wollstonecraft",
+    "source": "A Vindication of the Rights of Woman (1792)",
+    "text": "I do not wish them to have power over men; but over themselves.",
+    "tradition": "Ethics / political philosophy"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Henry David Thoreau",
+    "source": "Walden, “Where I Lived, and What I Lived For”",
+    "text": "Our life is frittered away by detail. Simplify, simplify.",
+    "tradition": "Transcendentalism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Ralph Waldo Emerson",
+    "source": "Self-Reliance (1841)",
+    "text": "Trust thyself: every heart vibrates to that iron string.",
+    "tradition": "Transcendentalism"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Friedrich Nietzsche",
+    "source": "Twilight of the Idols, “Maxims and Arrows” 8 (English translation)",
+    "text": "What does not kill me makes me stronger.",
+    "tradition": "European philosophy"
+  },
+  {
+    "domain": "Philosophy",
+    "author": "Bertrand Russell",
+    "source": "The Problems of Philosophy (1912), concluding chapter",
+    "text": "Philosophy is to be studied, not for the sake of any definite answers to its questions.",
+    "tradition": "Analytic philosophy"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Isaac Newton",
+    "source": "Letter to Robert Hooke (1676)",
+    "text": "If I have seen further it is by standing on the shoulders of Giants.",
+    "tradition": "Physics"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Isaac Newton",
+    "source": "Principia, General Scholium (English translation)",
+    "text": "I frame no hypotheses.",
+    "tradition": "Physics"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Charles Darwin",
+    "source": "The Descent of Man (1871)",
+    "text": "Ignorance more frequently begets confidence than does knowledge.",
+    "tradition": "Biology"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Charles Darwin",
+    "source": "On the Origin of Species (1859)",
+    "text": "There is grandeur in this view of life.",
+    "tradition": "Biology"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Michael Faraday",
+    "source": "Letter to Benjamin Abbott (1812)",
+    "text": "Nothing is too wonderful to be true, if it be consistent with the laws of nature.",
+    "tradition": "Chemistry / physics"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Louis Pasteur",
+    "source": "Lecture at University of Lille (1854; English translation)",
+    "text": "In the fields of observation chance favors only the prepared mind.",
+    "tradition": "Microbiology"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Ada Lovelace",
+    "source": "Notes on the Analytical Engine (1843)",
+    "text": "The Analytical Engine has no pretensions whatever to originate anything.",
+    "tradition": "Computing"
+  },
+  {
+    "domain": "Sciences",
+    "author": "Galileo Galilei",
+    "source": "The Assayer (1623; English translation)",
+    "text": "The universe ... is written in the language of mathematics.",
+    "tradition": "Astronomy / physics"
+  },
+  {
+    "domain": "Arts",
+    "author": "William Shakespeare",
+    "source": "Hamlet, Act II, Scene II",
+    "text": "There is nothing either good or bad, but thinking makes it so.",
+    "tradition": "Drama"
+  },
+  {
+    "domain": "Arts",
+    "author": "William Shakespeare",
+    "source": "The Tempest, Act IV, Scene I",
+    "text": "We are such stuff as dreams are made on.",
+    "tradition": "Drama"
+  },
+  {
+    "domain": "Arts",
+    "author": "William Shakespeare",
+    "source": "As You Like It, Act II, Scene VII",
+    "text": "All the world’s a stage.",
+    "tradition": "Drama"
+  },
+  {
+    "domain": "Arts",
+    "author": "William Blake",
+    "source": "Auguries of Innocence",
+    "text": "To see a World in a Grain of Sand.",
+    "tradition": "Poetry"
+  },
+  {
+    "domain": "Arts",
+    "author": "William Blake",
+    "source": "The Marriage of Heaven and Hell",
+    "text": "If the doors of perception were cleansed every thing would appear to man as it is, infinite.",
+    "tradition": "Poetry / visual arts"
+  },
+  {
+    "domain": "Arts",
+    "author": "John Keats",
+    "source": "Ode on a Grecian Urn",
+    "text": "Beauty is truth, truth beauty.",
+    "tradition": "Poetry"
+  },
+  {
+    "domain": "Arts",
+    "author": "Percy Bysshe Shelley",
+    "source": "A Defence of Poetry",
+    "text": "Poets are the unacknowledged legislators of the world.",
+    "tradition": "Poetry"
+  },
+  {
+    "domain": "Arts",
+    "author": "Emily Dickinson",
+    "source": "Poem 1263",
+    "text": "Tell all the truth but tell it slant —",
+    "tradition": "Poetry"
+  },
+  {
+    "domain": "Arts",
+    "author": "Walt Whitman",
+    "source": "Song of Myself, section 51",
+    "text": "I contain multitudes.",
+    "tradition": "Poetry"
+  },
+  {
+    "domain": "Arts",
+    "author": "Oscar Wilde",
+    "source": "The Picture of Dorian Gray, Preface",
+    "text": "All art is quite useless.",
+    "tradition": "Literature / aesthetics"
+  },
+  {
+    "domain": "Arts",
+    "author": "Leo Tolstoy",
+    "source": "What Is Art? (English translation)",
+    "text": "Art is a human activity consisting in this, that one man consciously, by means of certain external signs, hands on to others feelings he has lived through.",
+    "tradition": "Literature / aesthetics"
+  }
+]

@@ -99,3 +99,18 @@
 .path-question{padding:10px;border-left:3px solid #a9c5b2;background:rgba(130,160,150,.09);font-style:italic}
 .path-task .book-link{display:inline-block;margin:5px 10px 5px 0;font-size:.85rem}
 .path-task button{margin-top:8px}
+
+/* Daily Wisdom: accessible source-labelled collection */
+.wisdom-feature{border-left:3px solid #bca36c}
+.wisdom-quote{margin:18px 0;font-size:clamp(1.3rem,4.5vw,1.85rem);line-height:1.55;font-weight:500}
+.wisdom-author{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.wisdom-source{font-style:italic;margin:0 0 8px}
+.wisdom-results{display:grid;gap:10px;margin:14px 0}
+.wisdom-item{width:100%;text-align:left;display:flex;flex-direction:column;gap:8px;padding:14px;border:1px solid rgba(137,159,164,.3);border-radius:12px;background:rgba(110,141,147,.08);color:inherit}
+.wisdom-item span{font-size:.98rem;line-height:1.5}
+.wisdom-item small{opacity:.7}
+.wisdom-item:focus-visible{outline:3px solid #bca36c;outline-offset:2px}
+
+.wisdom-action{margin:18px 0;padding:17px;border-radius:14px;border-left:4px solid #bba16c;background:rgba(171,151,100,.12)}
+.wisdom-action strong{font-size:.76rem;letter-spacing:.12em}
+.wisdom-action p{font-size:1.04rem;line-height:1.65;margin:10px 0 0}
