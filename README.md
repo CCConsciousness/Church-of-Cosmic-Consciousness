@@ -16,3 +16,7 @@ Book catalog entries are descriptive placeholders: no PDFs are included or linke
 
 ## Next steps
 Connect approved CCC publications, create full lesson navigation, implement progress backup, add accessibility and mobile device tests, and consider an organization-approved icon.
+
+
+## Prototype 1.1 — Cosmic Decoder
+The Decoder includes four curated examples (Lotus, Garden of Eden, Indra’s Net, Tao). For other passages it provides clearly labeled inquiry prompts, NOT automated translations. The offline version has no AI service and cannot interpret arbitrary scripture accurately. To update an existing GitHub Pages deployment, upload/replace the files in this archive and wait for deployment; reopen or refresh the installed app online to receive the new service-worker version.
