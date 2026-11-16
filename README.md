@@ -11,3 +11,7 @@ Upload the contents of this ZIP to the **root** of your existing repository, rep
 Open every Read PDF link in a private/incognito browser window to ensure the Google Drive sharing permissions are set to **Anyone with the link — Viewer**. Files remain hosted on Google Drive, so reading them requires internet access unless the user downloads a PDF.
 
 No personal notes or progress data are intentionally cleared by this update. Still, export journal notes before making changes whenever possible.
+
+
+## Version 1.2.1 layout fix
+Book titles, subtitles, and reading links now appear on separate lines. Replace all app files in your GitHub Pages repository, including styles.css and sw.js, then wait for deployment and reopen the app. Existing local journal and progress data are not intentionally changed.
