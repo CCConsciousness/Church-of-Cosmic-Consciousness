@@ -20,3 +20,9 @@
 #books .book-link{display:inline-block;margin:0;line-height:1.4;font-size:13px;max-width:100%}
 @media(min-width:550px){#books .book-card{grid-template-columns:150px minmax(0,1fr);gap:22px;padding:20px}#books .book-body h3{font-size:21px}#books .book-description{font-size:15px}}
 @media(max-width:360px){#books .book-card{grid-template-columns:90px minmax(0,1fr);gap:10px;padding:11px}#books .book-body h3{font-size:16px}#books .book-description{font-size:13px}}
+
+/* v1.4 stage study tracker */
+.stage-card{padding:18px}.stage-links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.stage-links .book-link{margin:0;font-size:12px}.stage-count{font-size:13px;color:#d8eadf}.stage-progress{width:100%;height:10px;accent-color:#a8d7bf}.stage-details{margin-top:14px;border-top:1px solid #45606a;padding-top:13px}.stage-details summary{cursor:pointer;font-weight:700;color:#c9eddb}.stage-content{padding:8px 0}.module-group{padding:10px 0;border-bottom:1px solid #314958}.module-group h4{margin:5px 0 12px}.stage-note{font-size:12px}.stage-content .check{margin:11px 0}.stage-content .check span{line-height:1.5}
+
+/* Guided learning supplement */
+#guidedLearning{margin-top:1.2rem}#guidedLearning select{width:100%;margin:.4rem 0 1rem}#guideContent h3{margin-top:.6rem}.guide-steps{padding-left:1.4rem;line-height:1.65}.guide-steps li{margin:.4rem 0}.quiz-question{border:1px solid rgba(160,180,210,.28);border-radius:12px;padding:.8rem;margin:.8rem 0}.quiz-question legend{font-weight:650;padding:0 .3rem}.quiz-option{display:flex;gap:.65rem;align-items:flex-start;margin:.65rem 0;line-height:1.4}.quiz-option input{margin-top:.25rem;flex-shrink:0}.quiz-feedback{margin-top:.8rem;line-height:1.5}.quiz-feedback p{margin:.5rem 0}#guideContent>.outline{margin-bottom:.6rem}
