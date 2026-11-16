@@ -1,9 +1,28 @@
-# CCC Digital Mystery School — v1.5
+# CCC Digital Mystery School v1.11 — Expanded Cosmic Encyclopedia
 
-This is a complete replacement release based on v1.4. Includes 13 original book cover images, descriptions, all Google Drive reading links, existing stage checklists, personal journal, contemplation timer, and new Guided Inquiry & Self-Assessment tools for all four stages.
+This release expands the student encyclopedia from **180 to 557 source-indexed terms**, including **377 new entries**. All existing definitions and source references are preserved. Every new entry was checked for occurrence in the published *Cosmic Synthesicon* PDF; terms not found were excluded.
 
-## Deploy via GitHub Pages
-Upload the files at the root of this ZIP to the same repository directory containing your existing index.html. Keep the covers/ folder with book-01.webp through book-13.webp; if those 13 files are already present, they do not need re-uploading. Update index.html, app.js, styles.css and sw.js together. Allow deployment to finish and test the website in Chrome before the installed app.
+## Breakdown by category
 
-## Important
-The guided activities and multiple-choice questions are newly written supplemental learning aids. They are not official chapter excerpts, official lesson titles, official examinations, or certification decisions. For official sequences and assessments, refer to the published compendiums and workbooks. No remote database or account is required. Journal data remains under the existing localStorage key ccc-notes; study progress remains under ccc-progress. Export your journal before changing devices or clearing site data.
+- Arts & symbolic forms: 75
+- Philosophy & interpretation: 112
+- Religions & traditions: 253
+- Sciences & formal inquiry: 100
+- Synthesicon frameworks: 17
+
+## What's improved
+
+- Search by term, definition, or domain.
+- Filter by the five domains.
+- Browse every entry with **Show more** (no 250-entry cutoff).
+- Tap specialized terms in the atlas to see an explanation; common everyday words are excluded from automatic highlighting.
+- Explore related entries and source PDF page references.
+- The encyclopedia JSON is cached for offline use after the app is loaded.
+
+## Android GitHub Pages update
+
+**Replace:** `encyclopedia.json`, `encyclopedia.js`, `term-links.js`, `sw.js`, and `index.html`. Other files remain unchanged. You can also upload the full ZIP for a fresh installation. Do not delete existing files or clear site storage: progress and journal entries remain stored locally.
+
+## Editorial limitations
+
+Definitions are newly written educational explanations, not verbatim quotations from the book. Page references show where a term occurs, not proof of the definition or of agreement across traditions. The 11 × 11 × 11 × 11 matrix represents possible comparisons, not 14,641 completed articles. This is a broad study reference, not an exhaustive dictionary of every word in the book. Google Drive may not honor PDF page fragments in all viewers. Test on the deployed Android app after GitHub Pages publishes.
