@@ -1,18 +1,13 @@
-# CCC Digital Mystery School — Prototype 1.0
+# CCC Digital Mystery School — Version 1.2
 
-A free, static, installable Progressive Web App. No paid dependencies or account required.
+This release integrates all 13 provided Google Drive publication links into the Sacred Library and removes the Cosmic Decoder. Titles are assigned according to the agreed collection order; PDF content and public accessibility have not been independently verified.
 
-## Test locally
-Run `python3 -m http.server 8000` inside this folder and visit `http://localhost:8000`. Service workers work on localhost or HTTPS, not arbitrary `file://` paths.
+## Update your GitHub Pages site
 
-## Publish for free on GitHub Pages
-1. Create a public GitHub repository.
-2. Upload all files from this folder to its root.
-3. Open repository Settings → Pages → Deploy from a branch → main → /(root) → Save.
-4. Open the Pages HTTPS address on Android Chrome and select Install app or Add to Home screen.
+Upload the contents of this ZIP to the **root** of your existing repository, replacing the existing files (not the ZIP itself). Do not delete the repository or change Pages settings. If the web uploader does not allow overwriting, edit/replace the corresponding files in GitHub. Wait for the Pages deployment to finish, then reopen the installed PWA while online. The service-worker cache name was updated to refresh the app.
 
-## Current limitations
-Book catalog entries are descriptive placeholders: no PDFs are included or linked. Stage progress is an introductory checklist, not a complete course. Notes and progress are stored on the device; export notes before clearing browser data. Offline caching includes app shell only, not books. This is a prototype and not an official organizational seal or final brand asset.
+## Before sharing publicly
 
-## Next steps
-Connect approved CCC publications, create full lesson navigation, implement progress backup, add accessibility and mobile device tests, and consider an organization-approved icon.
+Open every Read PDF link in a private/incognito browser window to ensure the Google Drive sharing permissions are set to **Anyone with the link — Viewer**. Files remain hosted on Google Drive, so reading them requires internet access unless the user downloads a PDF.
+
+No personal notes or progress data are intentionally cleared by this update. Still, export journal notes before making changes whenever possible.
