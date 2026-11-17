@@ -1,10 +1,8 @@
-# CCC Digital Mystery School v1.17 — 365 Days of Wisdom
+# CCC Digital Mystery School v1.18 — Four New Books
 
-**365 dated daily experiences**, each with a historical quotation and a CCC-authored practical “Just for Today” activity.
+Adds four full books to the Sacred Library, bringing the collection to 17: The Cosmic Logos, The Cosmic Arithmos, The Devil’s Disciple, and The Thirty-Three Gates of the Absolute. Includes the four supplied cover images optimized as WebP, source-informed descriptions, and the user-supplied Google Drive PDF identifiers. New categories: Studies and Wisdom Literature. The original four canonical books and existing stage curricula remain unchanged.
 
-**Important editorial transparency:** This release includes **48 distinct historical quotations**, intentionally rotated through the 365-day calendar with 365 daily action assignments (some action phrasings recur). It does **not** falsely claim to include 365 unique historical quotations. Growing to 365 distinct accurately sourced historical quotations requires further quotation verification. All action steps are original editorial material, not attributed to the historical authors.
+## Update from v1.17 on GitHub Pages
+Replace `app.js`, `index.html`, and `sw.js`. Add `covers/book-14.webp`, `covers/book-15.webp`, `covers/book-16.webp`, and `covers/book-17.webp`. Other files remain unchanged.
 
-Features: automatic day-of-year selection, Day 1–365 selector, next-day button, return to today, historical quote browsing/search, and reflection-to-journal shortcut. Leap-day uses Day 59 so the calendar still works every year. Data is offline cached and no personal progress is changed.
-
-## GitHub Pages incremental update from v1.16
-Replace `index.html`, `wisdom.js`, `styles.css`, `sw.js`; add `wisdom-days.json`. Keep `wisdom-quotes.json` and all other app files unchanged.
+Note: Google Drive links require the PDFs to be shared with viewers. The application and personal progress remain local-first. The app was syntax-checked and ZIP-tested but not browser-tested on Android.
