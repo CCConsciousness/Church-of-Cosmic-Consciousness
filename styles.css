@@ -114,3 +114,9 @@
 .wisdom-action{margin:18px 0;padding:17px;border-radius:14px;border-left:4px solid #bba16c;background:rgba(171,151,100,.12)}
 .wisdom-action strong{font-size:.76rem;letter-spacing:.12em}
 .wisdom-action p{font-size:1.04rem;line-height:1.65;margin:10px 0 0}
+
+/* CCC Cosmic Broadcast Center v1 */
+#broadcast .broadcast-date{display:block;color:#b5c7cd;font-size:.85rem;margin-bottom:8px}
+#broadcast .broadcast-type{display:inline-block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#e2d3a4;margin-bottom:8px}
+#broadcast .broadcast-body{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}
+#broadcast .broadcast-link{color:#bcebd7;overflow-wrap:anywhere}
