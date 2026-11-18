@@ -17,6 +17,14 @@
       "category": "Network Announcement",
       "body": "The Church of Cosmic Consciousness is testing its new automated broadcasting network. This announcement marks an important milestone in our mission to make knowledge, philosophical inquiry, and the discipline of radical nonduality freely accessible. One Reality. Infinite Expressions. No Fundamental Division.",
       "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
+    },
+    {
+      "id": "broadcast-test-002",
+      "title": "CCC Cosmic Broadcast Network — Telegram Integration Test",
+      "date": "2026-11-18T11:00:00Z",
+      "category": "Network Announcement",
+      "body": "This is the second live test of the Church of Cosmic Consciousness automated broadcasting network. We are verifying that new announcements can travel from our official website through our RSS feed and into our Telegram channel with their complete titles, descriptions, and links. One Reality. Infinite Expressions. No Fundamental Division.",
+      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
     }
   ]
 }
