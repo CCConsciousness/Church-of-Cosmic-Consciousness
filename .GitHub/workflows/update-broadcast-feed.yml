@@ -1,0 +1,27 @@
+name: Update CCC Broadcast RSS Feed
+on:
+  push:
+    branches: [main]
+    paths:
+      - announcements.json
+      - scripts/build_feed.py
+      - .github/workflows/update-broadcast-feed.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate RSS feed
+        run: python3 scripts/build_feed.py
+      - name: Commit updated feed if changed
+        run: |
+          if ! git diff --quiet -- feed.xml; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add feed.xml
+            git commit -m 'Update CCC RSS feed from announcements'
+            git push
+          fi
