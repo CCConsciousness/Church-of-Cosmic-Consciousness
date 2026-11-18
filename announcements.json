@@ -1,4 +1,3 @@
-
 {
   "version": 1,
   "posts": [
@@ -24,6 +23,14 @@
       "date": "2026-11-18T11:00:00Z",
       "category": "Network Announcement",
       "body": "This is the second live test of the Church of Cosmic Consciousness automated broadcasting network. We are verifying that new announcements can travel from our official website through our RSS feed and into our Telegram channel with their complete titles, descriptions, and links. One Reality. Infinite Expressions. No Fundamental Division.",
+      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
+    },
+    {
+      "id": "ccc-20261118141834897",
+      "title": "CCC Dashboard Test",
+      "date": "2026-11-18T14:18:34.897Z",
+      "category": "Network Announcement",
+      "body": "Testing the new CCC Administrator Publishing Dashboard.",
       "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
     }
   ]
