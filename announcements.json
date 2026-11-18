@@ -1,3 +1,4 @@
+
 {
   "version": 1,
   "posts": [
@@ -7,6 +8,14 @@
       "date": "2026-11-17T12:00:00Z",
       "category": "Network Announcement",
       "body": "Welcome to the Church of Cosmic Consciousness Broadcast Center. This is the official home for future announcements, new publications, and community updates. One Reality. Infinite Expressions. No Fundamental Division.",
+      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
+    },
+    {
+      "id": "broadcast-test-001",
+      "title": "CCC Cosmic Broadcast Network — First Live Test",
+      "date": "2026-11-18T10:00:00Z",
+      "category": "Network Announcement",
+      "body": "The Church of Cosmic Consciousness is testing its new automated broadcasting network. This announcement marks an important milestone in our mission to make knowledge, philosophical inquiry, and the discipline of radical nonduality freely accessible. One Reality. Infinite Expressions. No Fundamental Division.",
       "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
     }
   ]
