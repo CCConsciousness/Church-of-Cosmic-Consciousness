@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCC | Administrator Dashboard</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;padding:24px 16px;
+  background:#091725;color:#e8f5f2;
+  font-family:Arial,sans-serif;
+}
+main{max-width:600px;margin:auto}
+h1{color:#a8dbc9;font-size:27px}
+h2{font-size:20px}
+p{line-height:1.5;color:#bfd0d5}
+.panel{
+  background:#162c3c;
+  border:1px solid #365666;
+  border-radius:16px;
+  padding:22px;margin:20px 0;
+}
+label{display:block;margin-top:16px}
+input,textarea,select{
+  display:block;width:100%;margin-top:8px;
+  padding:13px;border-radius:9px;
+  border:1px solid #56717e;
+  background:#0b1c2b;color:white;
+  font:16px Arial;
+}
+textarea{min-height:140px}
+button{
+  background:#a8dbc9;color:#09211e;
+  border:0;border-radius:9px;
+  padding:14px 22px;margin-top:20px;
+  font-size:16px;font-weight:bold;
+  cursor:pointer;
+}
+button:disabled{opacity:.5}
+#status{white-space:pre-wrap}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+<h1>🌌 CCC Cosmic Broadcast Network</h1>
+<p>Authorized Administrator Publishing Center</p>
+
+<section class="panel" id="loginPanel">
+<h2>Administrator Login</h2>
+<label>Email
+<input id="email" type="email" autocomplete="username">
+</label>
+<label>Password
+<input id="password" type="password" autocomplete="current-password">
+</label>
+<button id="loginBtn">Sign In</button>
+</section>
+
+<section class="panel" id="publishPanel" hidden>
+<h2>Publish Announcement</h2>
+<p id="account"></p>
+<button id="logoutBtn" type="button">Sign Out</button>
+
+<form id="publishForm">
+<label>Announcement Title
+<input id="title" required maxlength="150">
+</label>
+
+<label>Category
+<select id="category">
+<option>Network Announcement</option>
+<option>Publication</option>
+<option>Teaching</option>
+<option>Community Update</option>
+</select>
+</label>
+
+<label>Announcement Text
+<textarea id="bodyText" required></textarea>
+</label>
+
+<label>Optional Link
+<input id="url" type="url" placeholder="https://">
+</label>
+
+<button id="publishBtn" type="submit">
+Publish Announcement
+</button>
+</form>
+</section>
+
+<section class="panel">
+<h2>Network Status</h2>
+<p id="status" role="status" aria-live="polite">
+Connecting to Firebase...
+</p>
+</section>
+</main>
+
+<script type="module">
+import {initializeApp} from
+"https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+} from
+"https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp
+} from
+"https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
+
+const config = {
+  apiKey:"AIzaSyAh7nSd5szySNnOaLxNo2yGWBwmJx2c7I8",
+  authDomain:"ccc-cosmic-broadcast-network.firebaseapp.com",
+  projectId:"ccc-cosmic-broadcast-network",
+  storageBucket:"ccc-cosmic-broadcast-network.firebasestorage.app",
+  messagingSenderId:"317799195252",
+  appId:"1:317799195252:web:f92bd63d593d82b25ee721"
+};
+
+const app = initializeApp(config);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const el = id => document.getElementById(id);
+const status = message => el("status").textContent = message;
+
+onAuthStateChanged(auth, user => {
+  el("loginPanel").hidden = !!user;
+  el("publishPanel").hidden = !user;
+  el("account").textContent = user ? user.email : "";
+  status(user ? "Signed in. Ready to publish." : "Sign in to continue.");
+});
+
+el("loginBtn").onclick = async () => {
+  el("loginBtn").disabled = true;
+  status("Signing in...");
+  try {
+    await signInWithEmailAndPassword(
+      auth,el("email").value.trim(),el("password").value
+    );
+    el("password").value = "";
+  } catch(error) {
+    status("Login failed: " + error.code);
+  } finally {
+    el("loginBtn").disabled = false;
+  }
+};
+
+el("logoutBtn").onclick = async () => {
+  await signOut(auth);
+};
+
+el("publishForm").onsubmit = async event => {
+  event.preventDefault();
+  if (!auth.currentUser) {
+    status("Please sign in first.");
+    return;
+  }
+
+  const title = el("title").value.trim();
+  const body = el("bodyText").value.trim();
+  const url = el("url").value.trim();
+
+  if (!title || !body) {
+    status("Title and text are required.");
+    return;
+  }
+
+  if (url && !/^https?:\/\/.+/i.test(url)) {
+    status("Please enter a valid HTTP or HTTPS link.");
+    return;
+  }
+
+  el("publishBtn").disabled = true;
+  status("Publishing...");
+
+  try {
+    await addDoc(collection(db,"announcements"),{
+      title,
+      body,
+      category:el("category").value,
+      url,
+      date:serverTimestamp()
+    });
+
+    el("publishForm").reset();
+    status("Announcement published successfully!");
+  } catch(error) {
+    status("Publishing failed: " + error.code);
+  } finally {
+    el("publishBtn").disabled = false;
+  }
+};
+</script>
+</body>
+</html>
