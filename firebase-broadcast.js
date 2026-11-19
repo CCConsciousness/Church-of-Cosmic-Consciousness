@@ -71,6 +71,12 @@ if (item.id === "welcome-001") {
   continue;
 }
 
+      // Hide temporary publishing tests without deleting Firestore records.
+      const bodyText = String(item.body || "");
+      if (/firebase publishing test|publishing test/i.test(title + " " + bodyText)) {
+        continue;
+      }
+
       if (existingText.includes(title.toLowerCase())) {
         continue;
       }
