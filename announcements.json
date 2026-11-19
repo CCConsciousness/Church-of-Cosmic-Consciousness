@@ -1,45 +1,4 @@
 {
   "version": 1,
-  "posts": [
-    {
-      "id": "welcome-2026",
-      "title": "Welcome to the CCC Cosmic Broadcast Center",
-      "date": "2026-11-17T12:00:00Z",
-      "category": "Network Announcement",
-      "body": "Welcome to the Church of Cosmic Consciousness Broadcast Center. This is the official home for future announcements, new publications, and community updates. One Reality. Infinite Expressions. No Fundamental Division.",
-      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
-    },
-    {
-      "id": "broadcast-test-001",
-      "title": "CCC Cosmic Broadcast Network — First Live Test",
-      "date": "2026-11-18T10:00:00Z",
-      "category": "Network Announcement",
-      "body": "The Church of Cosmic Consciousness is testing its new automated broadcasting network. This announcement marks an important milestone in our mission to make knowledge, philosophical inquiry, and the discipline of radical nonduality freely accessible. One Reality. Infinite Expressions. No Fundamental Division.",
-      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
-    },
-    {
-      "id": "broadcast-test-002",
-      "title": "CCC Cosmic Broadcast Network — Telegram Integration Test",
-      "date": "2026-11-18T11:00:00Z",
-      "category": "Network Announcement",
-      "body": "This is the second live test of the Church of Cosmic Consciousness automated broadcasting network. We are verifying that new announcements can travel from our official website through our RSS feed and into our Telegram channel with their complete titles, descriptions, and links. One Reality. Infinite Expressions. No Fundamental Division.",
-      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
-    },
-    {
-      "id": "ccc-20261118141834897",
-      "title": "CCC Dashboard Test",
-      "date": "2026-11-18T14:18:34.897Z",
-      "category": "Network Announcement",
-      "body": "Testing the new CCC Administrator Publishing Dashboard.",
-      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
-    },
-    {
-      "id": "ccc-20261118185904785",
-      "title": "Copy Button Test",
-      "date": "2026-11-18T18:59:04.785Z",
-      "category": "Network Announcement",
-      "body": "Testing the live dashboard clipboard",
-      "url": "https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast"
-    }
-  ]
+  "posts": []
 }
