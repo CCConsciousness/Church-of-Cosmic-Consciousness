@@ -1,44 +1,9 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel>
     <title>Church of Cosmic Consciousness — Official Broadcasts</title>
     <link>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast</link>
     <description>Official CCC announcements and updates</description>
     <language>en-us</language>
-    <item>
-      <title>Copy Button Test</title>
-      <link>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast</link>
-      <guid>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast?post=ccc-20261118185904785</guid>
-      <description>Testing the live dashboard clipboard</description>
-      <pubDate>Wed, 18 Nov 2026 18:59:04 +0000</pubDate>
-    </item>
-    <item>
-      <title>CCC Dashboard Test</title>
-      <link>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast</link>
-      <guid>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast?post=ccc-20261118141834897</guid>
-      <description>Testing the new CCC Administrator Publishing Dashboard.</description>
-      <pubDate>Wed, 18 Nov 2026 14:18:34 +0000</pubDate>
-    </item>
-    <item>
-      <title>CCC Cosmic Broadcast Network — Telegram Integration Test</title>
-      <link>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast</link>
-      <guid>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast?post=broadcast-test-002</guid>
-      <description>This is the second live test of the Church of Cosmic Consciousness automated broadcasting network. We are verifying that new announcements can travel from our official website through our RSS feed and into our Telegram channel with their complete titles, descriptions, and links. One Reality. Infinite Expressions. No Fundamental Division.</description>
-      <pubDate>Wed, 18 Nov 2026 11:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>CCC Cosmic Broadcast Network — First Live Test</title>
-      <link>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast</link>
-      <guid>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast?post=broadcast-test-001</guid>
-      <description>The Church of Cosmic Consciousness is testing its new automated broadcasting network. This announcement marks an important milestone in our mission to make knowledge, philosophical inquiry, and the discipline of radical nonduality freely accessible. One Reality. Infinite Expressions. No Fundamental Division.</description>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Welcome to the CCC Cosmic Broadcast Center</title>
-      <link>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast</link>
-      <guid>https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/#broadcast?post=welcome-2026</guid>
-      <description>Welcome to the Church of Cosmic Consciousness Broadcast Center. This is the official home for future announcements, new publications, and community updates. One Reality. Infinite Expressions. No Fundamental Division.</description>
-      <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
-    </item>
   </channel>
 </rss>
