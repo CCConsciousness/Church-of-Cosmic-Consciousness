@@ -28,3 +28,16 @@ export async function getCosmicAnnouncements() {
     ...doc.data()
   }));
 }
+
+// CCC Firebase connection test
+getCosmicAnnouncements()
+  .then(announcements => {
+    console.log(
+      "CCC FIREBASE CONNECTED:",
+      announcements.length,
+      "announcement(s)"
+    );
+  })
+  .catch(error => {
+    console.error("CCC FIREBASE ERROR:", error);
+  });
