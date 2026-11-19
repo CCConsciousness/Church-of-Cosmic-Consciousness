@@ -43,3 +43,72 @@ getCosmicAnnouncements()
   });
 
 
+// CCC Firestore announcement display
+async function displayCosmicAnnouncements() {
+  const section = document.createElement("section");
+  section.id = "ccc-firebase-announcements";
+  section.style.cssText =
+    "max-width:900px;margin:24px auto;padding:16px;";
+
+  const heading = document.createElement("h2");
+  heading.textContent = "Latest Cosmic Broadcasts";
+  section.appendChild(heading);
+
+  const list = document.createElement("div");
+  section.appendChild(list);
+
+  try {
+    const announcements = await getCosmicAnnouncements();
+
+    // Avoid duplicating announcements already displayed.
+    const existingText = document.body.innerText.toLowerCase();
+
+    for (const item of announcements) {
+      const title = String(item.title || "Announcement");
+
+      if (existingText.includes(title.toLowerCase())) {
+        continue;
+      }
+
+      const card = document.createElement("article");
+      card.style.cssText =
+        "background:#172e3e;color:white;padding:20px;" +
+        "border:1px solid #355466;border-radius:16px;" +
+        "margin:12px 0;";
+
+      const cardTitle = document.createElement("h3");
+      cardTitle.textContent = title;
+      card.appendChild(cardTitle);
+
+      const body = document.createElement("p");
+      body.textContent = String(item.body || "");
+      card.appendChild(body);
+
+      if (typeof item.url === "string" &&
+          /^https?:\/\//i.test(item.url)) {
+        const link = document.createElement("a");
+        link.href = item.url;
+        link.textContent = "Read more";
+        link.style.color = "#a8dbc9";
+        card.appendChild(link);
+      }
+
+      list.appendChild(card);
+    }
+
+    if (list.children.length === 0) return;
+
+    const broadcastHeading = [...document.querySelectorAll("h1")]
+      .find(h => h.textContent.includes("Broadcast Center"));
+
+    if (broadcastHeading) {
+      const container = broadcastHeading.closest("main");
+      if (container) container.appendChild(section);
+    }
+  } catch (error) {
+    console.error("Firestore display error:", error);
+  }
+}
+
+displayCosmicAnnouncements();
+
