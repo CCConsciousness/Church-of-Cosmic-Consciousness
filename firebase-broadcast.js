@@ -66,6 +66,11 @@ async function displayCosmicAnnouncements() {
     for (const item of announcements) {
       const title = String(item.title || "Announcement");
 
+// Skip the welcome message already in the original feed.
+if (item.id === "welcome-001") {
+  continue;
+}
+
       if (existingText.includes(title.toLowerCase())) {
         continue;
       }
