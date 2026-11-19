@@ -41,3 +41,26 @@ getCosmicAnnouncements()
   .catch(error => {
     console.error("CCC FIREBASE ERROR:", error);
   });
+
+// Temporary Firebase connection indicator
+const statusBanner = document.createElement("div");
+
+statusBanner.style.cssText =
+  "position:fixed;top:0;left:0;right:0;" +
+  "z-index:99999;padding:12px;" +
+  "background:#142b39;color:white;" +
+  "font:14px Arial;text-align:center;";
+
+statusBanner.textContent = "Firebase: Connecting...";
+document.body.appendChild(statusBanner);
+
+getCosmicAnnouncements()
+  .then(announcements => {
+    statusBanner.textContent =
+      "Firebase CONNECTED: " +
+      announcements.length + " announcement(s)";
+  })
+  .catch(error => {
+    statusBanner.textContent =
+      "Firebase ERROR: " + error.code;
+  });
