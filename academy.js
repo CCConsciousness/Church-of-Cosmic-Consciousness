@@ -10,12 +10,12 @@ const lessons=[
 let active=null;
 const message=(id,text)=>$(id).textContent=text;
 function friendly(e){return ({'auth/operation-not-allowed':'Email/password sign-in must be enabled in Firebase Authentication.','auth/invalid-credential':'Incorrect email or password.','auth/email-already-in-use':'An account with that email already exists.','auth/weak-password':'Please use a stronger password.','auth/invalid-email':'Please enter a valid email address.','auth/too-many-requests':'Too many attempts. Please try later.'})[e.code]||'Unable to complete that request. Please try again.'}
-async function action(fn){message('authStatus','Working…');try{await fn();message('authStatus','Request completed.')}catch(e){message('authStatus',friendly(e))}}
-$('register').onclick=()=>action(async()=>{const c=await createUserWithEmailAndPassword(auth,$('email').value.trim(),$('password').value);await sendEmailVerification(c.user);message('authStatus','Verification email sent. Check your inbox.');});
-$('login').onclick=()=>action(()=>signInWithEmailAndPassword(auth,$('email').value.trim(),$('password').value));
-$('reset').onclick=()=>action(async()=>{if(!$('email').value.trim())throw {code:'auth/invalid-email'};await sendPasswordResetEmail(auth,$('email').value.trim());message('authStatus','If the account exists, a reset email has been sent.')});
-$('resend').onclick=()=>action(()=>sendEmailVerification(auth.currentUser));
-$('refresh').onclick=()=>action(async()=>{await reload(auth.currentUser);renderAuth(auth.currentUser)});
+async function action(fn){message('authStatus','Working…');try{const result=await fn();if(result)message('authStatus',result)}catch(e){message('authStatus',friendly(e))}}
+$('register').onclick=()=>action(async()=>{const c=await createUserWithEmailAndPassword(auth,$('email').value.trim(),$('password').value);await sendEmailVerification(c.user);return 'Verification email requested. Check Inbox, Spam, and All Mail.';});
+$('login').onclick=()=>action(async()=>{const c=await signInWithEmailAndPassword(auth,$('email').value.trim(),$('password').value);return c.user.emailVerified?'Signed in. Welcome to the Sanctuary.':'Signed in, but your email is not verified yet. Check your inbox or tap Resend verification.'});
+$('reset').onclick=()=>action(async()=>{if(!$('email').value.trim())throw {code:'auth/invalid-email'};await sendPasswordResetEmail(auth,$('email').value.trim());return 'If the account exists, a reset email has been requested.'});
+$('resend').onclick=()=>action(async()=>{await sendEmailVerification(auth.currentUser);return 'Verification email requested again. Check Spam and All Mail too.'});
+$('refresh').onclick=()=>action(async()=>{await reload(auth.currentUser);renderAuth(auth.currentUser);return auth.currentUser.emailVerified?'Email verified. Welcome!':'Still awaiting email verification. Please open the link in your email first.'});
 $('logout').onclick=()=>signOut(auth);
 onAuthStateChanged(auth,renderAuth);
 function renderAuth(user){const verified=!!user?.emailVerified;$('auth').classList.toggle('hidden',verified);$('portal').classList.toggle('hidden',!verified);$('verify').classList.toggle('hidden',!user||verified);if(user&&!verified)message('authStatus','Verify '+user.email+' to access the sanctuary.');if(verified){$('memberLabel').textContent='Signed in as '+user.email;renderCatalog();}}
