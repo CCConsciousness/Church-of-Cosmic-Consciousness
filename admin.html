@@ -12,7 +12,12 @@ body{
   background:#091725;color:#e8f5f2;
   font-family:Arial,sans-serif;
 }
-main{max-width:600px;margin:auto}
+main{max-width:720px;margin:auto}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.stat{background:#0b1c2b;border:1px solid #365666;border-radius:12px;padding:18px}
+.stat strong{display:block;font-size:38px;color:#a8dbc9;margin:12px 0}
+.stat small{color:#bfd0d5}
+.note{font-size:13px;color:#bfd0d5}
 h1{color:#a8dbc9;font-size:27px}
 h2{font-size:20px}
 p{line-height:1.5;color:#bfd0d5}
@@ -57,6 +62,14 @@ button:disabled{opacity:.5}
 <input id="password" type="password" autocomplete="current-password">
 </label>
 <button id="loginBtn">Sign In</button>
+</section>
+
+<section class="panel" id="dashboardPanel" hidden>
+<h2>Membership Dashboard</h2>
+<p>Registered accounts in the CCC Members’ Sanctuary.</p>
+<div class="stats"><div class="stat"><small>Total Registered Accounts</small><strong id="memberCount" aria-live="polite">—</strong><small id="memberCountStatus">Checking secure statistics…</small></div></div>
+<p class="note">Account totals require a protected server-maintained statistic. A dash means the live count is not yet configured, not zero members.</p>
+<button id="refreshStatsBtn" type="button">Refresh Membership Statistics</button>
 </section>
 
 <section class="panel" id="publishPanel" hidden>
@@ -116,7 +129,9 @@ import {
   getFirestore,
   collection,
   addDoc,
-  serverTimestamp
+  serverTimestamp,
+  doc,
+  getDoc
 } from
 "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
 
@@ -135,11 +150,37 @@ const db = getFirestore(app);
 const el = id => document.getElementById(id);
 const status = message => el("status").textContent = message;
 
+async function refreshMembershipCount() {
+  const user = auth.currentUser;
+  if (!user) return;
+  el("memberCount").textContent = "—";
+  el("memberCountStatus").textContent = "Checking secure statistics…";
+  try {
+    // This document must be populated by a trusted backend and restricted
+    // to authorized administrators in Firestore Security Rules.
+    const snapshot = await getDoc(doc(db, "adminStats", "membership"));
+    if (auth.currentUser?.uid !== user.uid) return;
+    const total = snapshot.exists() ? snapshot.data().totalRegisteredAccounts : null;
+    if (!Number.isSafeInteger(total) || total < 0) throw new Error("not-configured");
+    el("memberCount").textContent = total.toLocaleString();
+    el("memberCountStatus").textContent = "Latest available registered-account total";
+  } catch (error) {
+    if (auth.currentUser?.uid !== user.uid) return;
+    el("memberCountStatus").textContent = error.code === "permission-denied"
+      ? "Administrator statistics access not configured."
+      : "Live membership count not yet configured.";
+  }
+}
+el("refreshStatsBtn").onclick = refreshMembershipCount;
+
 onAuthStateChanged(auth, user => {
+  el("dashboardPanel").hidden = !user;
   el("loginPanel").hidden = !!user;
   el("publishPanel").hidden = !user;
   el("account").textContent = user ? user.email : "";
   status(user ? "Signed in. Ready to publish." : "Sign in to continue.");
+  if (user) refreshMembershipCount();
+  else { el("memberCount").textContent = "—"; el("memberCountStatus").textContent = "Sign in to view statistics."; }
 });
 
 el("loginBtn").onclick = async () => {
