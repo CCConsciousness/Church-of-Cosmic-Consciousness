@@ -165,6 +165,7 @@ async function refreshMembershipCount() {
     el("memberCount").textContent = total.toLocaleString();
     el("memberCountStatus").textContent = "Latest available registered-account total";
   } catch (error) {
+    console.error("CCC membership statistics read failed", {code:error.code, message:error.message, projectId:app.options.projectId, authenticated:!!auth.currentUser});
     if (auth.currentUser?.uid !== user.uid) return;
     el("memberCountStatus").textContent = error.code === "permission-denied"
       ? "Administrator statistics access not configured."
