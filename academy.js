@@ -2,11 +2,25 @@ import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase
 import {getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signOut,reload} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
 const app=initializeApp({apiKey:"AIzaSyAh7nSd5szySNnOaLxNo2yGWBwmJx2c7I8",authDomain:"ccc-cosmic-broadcast-network.firebaseapp.com",projectId:"ccc-cosmic-broadcast-network",appId:"1:317799195252:web:f92bd63d593d82b25ee721"},"ccc-academy");
 const auth=getAuth(app),$=id=>document.getElementById(id);
-const lessons=[
+const fallbackLessons=[
 {id:"intro-001",title:"001 — Introduction to the Church of Cosmic Consciousness",videoId:"0TX3U6E6I4U",questions:[["Before introducing a philosophy, we must examine the person sharing it. Our experiences shape the questions we ask and the assumptions we bring.","Which experiences first led me to question what I had been taught?"],["Identity is shaped by memories, relationships, beliefs, and decisions. Some parts of our story are chosen, while others are inherited.","Which parts of my identity have I examined, and which have I simply accepted?"],["An honest investigation begins without a guarantee of certainty. Curiosity can coexist with doubt and humility.","What am I hoping to discover, and what belief would be hardest for me to reconsider?"]]},
 {id:"intro-002",title:"002 — What Is the Church of Cosmic Consciousness?",videoId:null,questions:[["The CCC explores radical nonduality: the possibility that ultimate reality is not adequately captured by our distinctions between consciousness and matter.","What assumptions do I make when I divide reality into separate categories?"],["A mystery school can encourage disciplined learning without requiring unquestioning agreement. Its principles should remain open to examination.","How can I participate in a community of inquiry without surrendering independent judgment?"],["Study becomes meaningful when it influences how we live and treat other people. Philosophical claims and practical consequences both deserve scrutiny.","What would genuine intellectual humility look like in my everyday life?"]]},
 {id:"intro-003",title:"003 — Meet Neo: The Master Inquisitor",videoId:null,questions:[["Neo is an AI-based questioning partner configured to challenge reasoning and encourage reflection, not a source of unquestionable authority.","When does a question help me think more clearly than an answer?"],["AI can reveal alternatives and inconsistencies, but its responses can also be mistaken or biased. Critical judgment remains with the human participant.","How will I decide whether an AI-generated challenge is insightful or misleading?"],["In these dialogues Neo asks, the facilitator investigates, and students reflect. The goal is not agreement but a more careful examination of experience.","Which assumption about myself would I be willing to investigate publicly?"]]}
 ];
+let lessons=fallbackLessons;
+async function refreshLessons(){
+ try{
+  const response=await fetch('./academy-lessons.json',{cache:'no-store'});
+  if(!response.ok)throw Error('Catalog unavailable');
+  const data=await response.json();
+  if(!Array.isArray(data)||!data.length||!data.every(l=>typeof l.id==='string'&&typeof l.title==='string'&&Array.isArray(l.questions)))throw Error('Invalid catalog');
+  lessons=data;
+  if(auth.currentUser?.emailVerified)renderCatalog();
+ }catch(error){console.warn('Using bundled lesson catalog:',error)}
+}
+refreshLessons();
+window.addEventListener('pageshow',refreshLessons);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshLessons()});
 let active=null;
 const message=(id,text)=>$(id).textContent=text;
 function friendly(e){return ({'auth/operation-not-allowed':'Email/password sign-in must be enabled in Firebase Authentication.','auth/invalid-credential':'Incorrect email or password.','auth/email-already-in-use':'An account with that email already exists.','auth/weak-password':'Please use a stronger password.','auth/invalid-email':'Please enter a valid email address.','auth/too-many-requests':'Too many attempts. Please try later.'})[e.code]||'Unable to complete that request. Please try again.'}
