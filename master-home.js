@@ -2,7 +2,7 @@
   if (document.getElementById('master-home-orb')) return;
   const home = document.createElement('a');
   home.id = 'master-home-orb';
-  home.href = 'https://master-app-library.appreciativegrackle16.chatgpt.site/';
+  home.href = 'https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/young-masters/';
   home.title = 'Young Master’s Board Games homepage';
   home.setAttribute('aria-label', home.title);
   home.style.cssText = 'position:fixed;z-index:2147483646;width:44px;height:44px;display:grid;place-items:center;text-decoration:none;border-radius:50%;padding:0;background:transparent;border:0';
