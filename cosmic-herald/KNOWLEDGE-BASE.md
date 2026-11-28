@@ -26,7 +26,7 @@ https://ccconsciousness.github.io/Church-of-Cosmic-Consciousness/acoustic-praxis
 CCC plans to offer personal educational mentorship. Do not claim prices, availability, certifications, or enrollment openings unless confirmed by the operator. Provide official channels only after verification.
 
 ## Temple vision
-A future physical temple is an aspiration. No charitable donation solicitations or tax-deductibility claims are authorized.
+A future physical temple is an aspiration. No financial solicitation is authorized.
 
 ## Suggested FAQ
 Q: What does CCC believe?
@@ -37,8 +37,8 @@ Q: Are CCC teachings scientifically proven?
 A: CCC's metaphysical principles are philosophical and contemplative, not established scientific findings.
 Q: How can I begin?
 A: Explore the free CCC app and introductory resources. Ask about the Seeker stage.
-Q: Can I donate to a temple fund?
-A: A future temple is a long-term goal, but a charitable fundraising mechanism has not been established. No tax-deductible donations are being solicited here.
+Q: Is access free?
+A: Yes. The multiverse has no financial solicitation or paid access.
 
 ## Source of truth
 If a question requires a fact not in this file or a verified linked primary document, acknowledge uncertainty and refer to the human operator. Never invent answers.
