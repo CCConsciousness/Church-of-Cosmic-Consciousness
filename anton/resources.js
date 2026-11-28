@@ -100,32 +100,7 @@ const resources = {
     "prompt": "Bring to mind one small thing someone entrusted to your care. What would it mean to honor that trust today?"
   }
 };
-const jokes = [
-  "I wore my best trousers to the bank. Six pockets, all lint. Spare a little change for the app?",
-  "We held a bake sale. One muffin landed on the stall and now it’s a rescue operation. Can you chip in?",
-  "I saved a penny for a rainy day. It’s raining, and the penny is our roof. Could you spare another?",
-  "My accountant rolled my savings away. Lovely fellow, that dung beetle, but we’ve parted ways. Help me start again?",
-  "I opened a joint account with a grasshopper. He’s in show business now. Any chance you could spot me a little?",
-  "I asked the bank for a small loan. They handed me a magnifying glass. Could you help keep the app going?",
-  "I tried busking. Six tap shoes cost more than I made all summer. Would you tip an ant anyway?",
-  "I brought home the bacon. One grain of bacon, technically. Can you help with the hosting bill?",
-  "My rich uncle left me a hill. Turns out I already live under it. Spare a little something for the app?",
-  "The ladybird offered me eight spots. A generous offer, but PayPal won’t take spots. Could you chip in?",
-  "I sold my wheelbarrow for a nickel. Now I need a wheelbarrow to get the nickel home. A digital tip, perhaps?",
-  "The colony voted to double my salary. Twice zero! I’m framing the letter. Could you spare a tip?",
-  "We found buried treasure. It says ‘one free shopping cart’ and weighs more than the village. Could you help?",
-  "I knitted six stockings for payday. I could have stopped at one. Spare a little to keep these stories going?",
-  "I put my last crumb in a savings jar. This morning it had little teeth marks. Yes, they match mine. Chip in?",
-  "I taught the millipede to tap-dance for a fee. Still waiting for him to finish tying his shoes. A little help?",
-  "I tried paying rent with a sugar cube. By the time it reached the landlord I owed him an apology. Spare change?",
-  "My wallet made a noise! Never mind. Cricket. Could you give him a penny for company?",
-  "A moth ate my budget. That’s the first square meal anybody’s got out of it. Can you help fund the next adventure?",
-  "I found a coin under the sofa. From down here, that’s a mining project. Could we try PayPal instead?",
-  "I asked the spider about web hosting. Now I’ve got a beautiful web and three very cross flies. Chip in for the app?",
-  "I invested in breadcrumbs. Great returns until lunch. Could you help replenish the treasury?",
-  "I passed my hat around the anthill. It came back with a smaller ant living in it. Room for a tip?",
-  "The beetle says I should live within my means. I measured. It’s half an acorn. Could you help with the app?"
-];
+const jokes = ["I counted my pockets and discovered six opportunities for lint.", "I tried to measure wisdom with a ruler. The ruler resigned.", "My greatest treasure is curiosity. It fits in no pocket."];
 let remaining = [];
 let lastJoke = -1;
 try {
@@ -149,13 +124,7 @@ function nextJoke() {
   try {sessionStorage.setItem('anton-jokes-v1',JSON.stringify({deck:remaining,last:lastJoke}));} catch {}
   return jokes[lastJoke];
 }
-function donationAppeal() {
-  const destination = 'donate.html' + encodeURI(location.hash).replaceAll("'", '%27').replaceAll('"','%22').replaceAll('&','&amp;');
-  return '<section class="anton-appeal"><h2>Anton passes the hat</h2><p class="appeal-line" aria-live="polite">'+nextJoke()+'</p>'+
-    '<a class="seal-link" href="'+destination+'"><img src="green-rose-seal.png" alt="" width="88" height="88"><span>Donate via PayPal ↗</span></a>'+
-    '<div><button class="another-joke" type="button">Hear another plea</button></div>'+
-    '<small><a href="'+destination+'">www.paypal.com/paypalme/CCConsciousness</a></small></section>';
-}
+function antonReflection() { return '<section class="anton-appeal"><h2>Anton reflects</h2><p class="appeal-line" aria-live="polite">'+nextJoke()+'</p><button class="another-joke" type="button">Another reflection</button></section>'; }
 document.addEventListener('click', event=>{
   const control=event.target.closest('.another-joke');
   if (control) control.closest('.anton-appeal').querySelector('.appeal-line').textContent=nextJoke();
@@ -172,5 +141,5 @@ function trailEnding(slug, mode, answer) {
   return '<section class="ending"><small>End of the trail</small><h2>'+title+'</h2>'+
     (mode==='listen'?'<p>'+trail.prompt+'</p>':'')+
     '<iframe class="media-frame '+mode+'" src="'+embed+'" title="'+title+'" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>'+
-    '<a class="destination" href="'+url+'">'+fallback+' ↗</a></section>'+donationAppeal();
+    '<a class="destination" href="'+url+'">'+fallback+' ↗</a></section>'+antonReflection();
 }
